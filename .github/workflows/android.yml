@@ -23,4 +23,4 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build --gradle-version 7.0.2
+      run: gradle wrapper --gradle-version 7.0.2 && ./gradlew build
