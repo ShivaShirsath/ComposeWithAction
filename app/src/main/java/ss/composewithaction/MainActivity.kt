@@ -25,10 +25,37 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Greeting(name: String) {  
+    Column(
+        modifier = Modifier.fillMaxWidth().fillMaxHeight(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        val context = ContextAmbient.current
+        Button(
+            onClick = {
+              Toast.makeText(
+                  context, 
+                  "Welcome to Action Compose", 
+                  Toast.LENGTH_LONG
+              ).show()
+            },
+            modifier = Modifier.padding(all = Dp(10F)),
+            enabled = true,
+            border = BorderStroke(
+                width = 1.dp,
+                brush = SolidColor(Color.Red)
+            ),
+            shape = MaterialTheme.shapes.medium,
+        ){
+            Text(
+                text = "Click me", 
+                color = Color.White
+            )
+        }
+    }
 }
-
+/*
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
@@ -36,3 +63,4 @@ fun DefaultPreview() {
         Greeting("Android")
     }
 }
+*/
