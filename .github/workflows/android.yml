@@ -30,3 +30,4 @@ jobs:
         name: Getting Ready your apk
         run: ls ./app/build/outputs/apk/
         path: ./app/build/outputs/apk/*.apk
+
