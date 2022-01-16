@@ -24,11 +24,15 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build 
-         
+      
+    - name: Getting apk ready
+      run: echo -e '\\033[1;38;5;46mBuilding APK'
     - uses: actions/upload-artifact@v2
       with:
-        name: Getting Ready your apk
-        path: ./app/build/outputs/apk/debug/app-debug.apk
+        name: action done
+        path: |
+          ./app/build/outputs/apk/debug/app-debug.apk
+          ./app/build/outputs/apk/release/app-release-unsigned.apk
 
     - name: Listing dir
       run: ls -a ./app/build/outputs/apk/debug && echo "" && ls -a ./app/build/outputs/apk/release
