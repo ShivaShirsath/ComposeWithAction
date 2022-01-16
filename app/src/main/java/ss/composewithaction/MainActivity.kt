@@ -46,17 +46,14 @@ fun Greeting(name: String) {
     ) {
         Button(
             onClick = {
-              Toast.makeText(
-                  context, 
-                  "Welcome to Action Compose", 
-                  Toast.LENGTH_LONG
-              ).show()
+              Text(
+                  text = "This is Clicked Event",
+              )
             },
             enabled = true,
         ){
             Text(
                 text = "Click me", 
-                color = Color.White
             )
         }
     }
