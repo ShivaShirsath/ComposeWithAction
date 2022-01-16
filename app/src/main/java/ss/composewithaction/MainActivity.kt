@@ -30,16 +30,7 @@ class MainActivity : ComponentActivity() {
             ComposeWithActionTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting()
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun Greeting() {  
-    Column(
+                    Column(
         modifier = Modifier.fillMaxWidth().fillMaxHeight(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -57,8 +48,17 @@ fun Greeting() {
             )
         }
     }
+                }
+            }
+        }
+    }
 }
 /*
+@Composable
+fun Greeting() {  
+    
+}
+
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
