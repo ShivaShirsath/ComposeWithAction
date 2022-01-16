@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
         Button(
             onClick = {
               Text(
-                  text = "This is Clicked Event",
+                  text = "This is Clicked Event"
               )
             },
             enabled = true,
