@@ -3,24 +3,17 @@ package ss.composewithaction
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
-import ss.composewithaction.ui.theme.ComposeWithActionTheme
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 
-import android.graphics.drawable.shapes.*
-import android.media.Image
-import androidx.compose.foundation.*
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.*
-import androidx.compose.foundation.text.*
-import androidx.compose.material.*
-import androidx.compose.material.icons.*
-import androidx.compose.material.icons.filled.*
-import androidx.compose.runtime.*
-import androidx.compose.ui.*
+import ss.composewithaction.ui.theme.ComposeWithActionTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,18 +22,18 @@ class MainActivity : ComponentActivity() {
             ComposeWithActionTheme {
                 Surface(color = MaterialTheme.colors.background) {
                     Column(
-                    	modifier = Modifier.fillMaxWidth().fillMaxHeight(),
-                    	verticalArrangement = Arrangement.Center,
-                    	horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.fillMaxSize(),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
-                    	Button(
-                    		onClick = {},
-                    		enabled = true,
-                    	) {
-                    		Text(
-                    			text = "Click me", 
-                    		)
-                    	}
+                        Button(
+                            onClick = {},
+                            enabled = true,
+                        ) {
+                            Text(
+                                text = "Click me",
+                            )
+                        }
                     }
                 }
             }
