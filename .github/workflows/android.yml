@@ -24,10 +24,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Find Directory
+    - name: Getting Ready your apk
     - uses: actions/upload-artifact@v2
       with:
-        name: Getting Ready your apk
         run: ls ./app/build/outputs/apk/
         path: ./app/build/outputs/apk/*.apk
 
