@@ -35,11 +35,7 @@ class MainActivity : ComponentActivity() {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Button(
-            onClick = {
-              Text(
-                  text = "This is Clicked Event"
-              )
-            },
+            onClick = {},
             enabled = true,
         ){
             Text(
