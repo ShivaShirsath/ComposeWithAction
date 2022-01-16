@@ -27,22 +27,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeWithActionTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     Column(
-        modifier = Modifier.fillMaxWidth().fillMaxHeight(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Button(
-            onClick = {},
-            enabled = true,
-        ){
-            Text(
-                text = "Click me", 
-            )
-        }
-    }
+                    	modifier = Modifier.fillMaxWidth().fillMaxHeight(),
+                    	verticalArrangement = Arrangement.Center,
+                    	horizontalAlignment = Alignment.CenterHorizontally,
+                    ) {
+                    	Button(
+                    		onClick = {},
+                    		enabled = true,
+                    	) {
+                    		Text(
+                    			text = "Click me", 
+                    		)
+                    	}
+                    }
                 }
             }
         }
