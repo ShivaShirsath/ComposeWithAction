@@ -44,10 +44,7 @@ class MainActivity : ComponentActivity() {
                             },
                         ) {
                             Text(
-                                text = """
-                                   Shiva is Here 🤘🤘
-                                   You Must Remember, Who am I. 😁
-                                """
+                                text = "Shiva is Here 🤘\nYou Must Remember, Who am I. 😁"
                             )
                         }
                     }
