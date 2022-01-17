@@ -15,6 +15,7 @@ import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextAlign
 
 import ss.composewithaction.ui.theme.ComposeWithActionTheme
 
@@ -44,7 +45,8 @@ class MainActivity : ComponentActivity() {
                             },
                         ) {
                             Text(
-                                text = "Shiva is Here 🤘\nYou Must Remember, Who am I. 😁"
+                                text = "Shiva is Here 🤘\nYou Must Remember, Who am I. 😁",
+                                textAlign = TextAlign.Center,
                             )
                         }
                     }
