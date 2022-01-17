@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                                     Intent(
                                         Intent.ACTION_VIEW,
                                         Uri.parse(
-                                            "https://www.google.com/"
+                                            "https://github.com/ShivaShirsath"
                                         )
                                     )
                                 )
