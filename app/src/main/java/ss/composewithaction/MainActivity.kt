@@ -1,5 +1,7 @@
 package ss.composewithaction
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,6 +14,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 
 import ss.composewithaction.ui.theme.ComposeWithActionTheme
 
@@ -26,12 +29,25 @@ class MainActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
+                        val context = LocalContext.current
                         Button(
-                            onClick = {},
                             enabled = true,
+                            onClick = {
+                                context.startActivity(
+                                    Intent(
+                                        Intent.ACTION_VIEW,
+                                        Uri.parse(
+                                            "https://www.google.com/"
+                                        )
+                                    )
+                                )
+                            },
                         ) {
                             Text(
-                                text = "Click me",
+                                text = """
+                                   Shiva is Here 🤘🤘
+                                   You Must Remember, Who am I. 😁
+                                """
                             )
                         }
                     }
